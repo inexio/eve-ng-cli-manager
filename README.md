@@ -1,5 +1,9 @@
 # snmpsim-cli-manager
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/inexio/eve-ng-cli-manger)](https://goreportcard.com/report/github.com/inexio/eve-ng-cli-manger)
+[![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/inexio/eve-ng-cli-manger/blob/master/LICENSE)
+[![GitHub code style](https://img.shields.io/badge/code%20style-uber--go-brightgreen)](https://github.com/uber-go/guide/blob/master/style.md)
+
 ## Description
 
 A tool for using the [Eve-NG](https://www.eve-ng.net/)  [REST API](https://www.eve-ng.net/index.php/documentation/howtos/how-to-eve-ng-api/) via the command-line written in go using the cobra CLI framework.
