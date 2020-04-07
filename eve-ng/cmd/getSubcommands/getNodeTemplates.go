@@ -70,6 +70,3 @@ The list consists of the template names and a brief description:
 		}
 	},
 }
-
-func init() {
-}
