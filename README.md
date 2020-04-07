@@ -172,12 +172,12 @@ Which should return:
 ```
 Lab
   Id: a486aa2d-6036-4f3a-9162-82050d80e1ec
-  Name: TestLabab
+  Name: TestLab
   Version: 1
   Author: admin
   Body: A longer version of your description
   Description: A Test Lab
-  Filename: TestLabab.unl
+  Filename: TestLab.unl
 ```
 
 To add a network use the create command:
