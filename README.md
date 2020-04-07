@@ -1,4 +1,4 @@
-# snmpsim-cli-manager
+# eve-ng-cli-manager
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/inexio/eve-ng-cli-manger)](https://goreportcard.com/report/github.com/inexio/eve-ng-cli-manger)
 [![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/inexio/eve-ng-cli-manger/blob/master/LICENSE)
