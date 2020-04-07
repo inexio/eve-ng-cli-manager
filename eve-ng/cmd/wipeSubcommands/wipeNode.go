@@ -67,21 +67,21 @@ var WipeNodeCmd = &cobra.Command{
 		} else {
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
-				Msg("Couldn't convert networkId to int")
+				Msg("Couldn't convert networkID to int")
 			os.Exit(1)
 		}
 
 		//Perform WipeNode operation
-		err = client.WipeNode(lab, nodeId)
+		err = client.WipeNode(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during WipeNode")
 			os.Exit(1)
 		}
 
-		fmt.Println("Node", nodeId, "has been wiped successfully.")
+		fmt.Println("Node", nodeID, "has been wiped successfully.")
 	},
 }

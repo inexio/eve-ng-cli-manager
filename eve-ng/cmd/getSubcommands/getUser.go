@@ -20,7 +20,7 @@ The returned topology contains information about:
 	- destination
 	- source
 	- type
-	- networkId`,
+	- networkID`,
 	Run: func(cmd *cobra.Command, args []string) {
 		//Parse format, depth and prettified
 		format, depth, prettified := parsePersistentFlags(cmd)

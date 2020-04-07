@@ -13,7 +13,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func toJson(data interface{}, prettified bool) ([]byte, error) {
+func toJSON(data interface{}, prettified bool) ([]byte, error) {
 	var err error
 	var jsonData []byte
 
@@ -32,7 +32,7 @@ func toJson(data interface{}, prettified bool) ([]byte, error) {
 	return jsonData, nil
 }
 
-func toXml(data interface{}, prettified bool) ([]byte, error) {
+func toXML(data interface{}, prettified bool) ([]byte, error) {
 	var err error
 	var xmlData []byte
 
@@ -167,14 +167,14 @@ func parsePersistentFlags(cmd *cobra.Command) (string, int, bool) {
 func PrintData(format string, rawData interface{}, prettified bool, depth int) error {
 	switch format {
 	case "xml":
-		data, err := toXml(rawData, prettified)
+		data, err := toXML(rawData, prettified)
 		if err != nil {
 			return err
 		}
 		fmt.Println(string(data))
 		break
 	case "json":
-		data, err := toJson(rawData, prettified)
+		data, err := toJSON(rawData, prettified)
 		if err != nil {
 			return err
 		}

@@ -67,7 +67,7 @@ var ExportNodeCmd = &cobra.Command{
 		} else {
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read node-id value")
@@ -75,13 +75,13 @@ var ExportNodeCmd = &cobra.Command{
 		}
 
 		//Perform ExportNode operation
-		err = client.ExportNode(lab, nodeId)
+		err = client.ExportNode(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during ExportNode")
 			os.Exit(1)
 		}
 
-		fmt.Println("Node", nodeId, "has been exported successfully.")
+		fmt.Println("Node", nodeID, "has been exported successfully.")
 	},
 }

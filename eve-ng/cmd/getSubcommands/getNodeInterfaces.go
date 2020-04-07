@@ -73,15 +73,15 @@ The returned list contains further data on each interface`,
 		}
 
 		//Parse node-id var
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
-				Msg("Couldn't convert networkId to int")
+				Msg("Couldn't convert networkID to int")
 			os.Exit(1)
 		}
 
 		//Perform GetNodeInterfaces opeation
-		nodeInterfaces, err := client.GetNodeInterfaces(lab, nodeId)
+		nodeInterfaces, err := client.GetNodeInterfaces(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during GetLabNodeInterfaces")

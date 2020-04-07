@@ -68,21 +68,21 @@ var DeleteNodeCmd = &cobra.Command{
 		} else {
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
 				Msg("Couldn't convert node-id to int")
 			os.Exit(1)
 		}
 
-		err = client.RemoveNode(lab, nodeId)
+		err = client.RemoveNode(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during Removenode")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully deleted node", strconv.Itoa(nodeId)+".")
+		fmt.Println("Successfully deleted node", strconv.Itoa(nodeID)+".")
 	},
 }
 

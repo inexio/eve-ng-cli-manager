@@ -68,7 +68,7 @@ var NodeToNetworkCmd = &cobra.Command{
 		}
 
 		//Parse node-, network- and interface-id
-		nodeId, err := cmd.Flags().GetInt("node")
+		nodeID, err := cmd.Flags().GetInt("node")
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read 'node' flag value")
@@ -80,7 +80,7 @@ var NodeToNetworkCmd = &cobra.Command{
 				Msg("Couldn't read 'interface' flag value")
 			os.Exit(1)
 		}
-		networkId, err := cmd.Flags().GetInt("network")
+		networkID, err := cmd.Flags().GetInt("network")
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read 'network' flag value")
@@ -88,14 +88,14 @@ var NodeToNetworkCmd = &cobra.Command{
 		}
 
 		//Perform ConnectNodeInterfaceToNetwork operation
-		err = client.ConnectNodeInterfaceToNetwork(lab, nodeId, interfaceId, networkId)
+		err = client.ConnectNodeInterfaceToNetwork(lab, nodeID, interfaceId, networkID)
 		if err != nil {
 			log.Error().
 				Msg("Error during ConnectNodeInterfaceToNetwork")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully connect interface", interfaceId, "of node", nodeId, "to network", networkId)
+		fmt.Println("Successfully connect interface", interfaceId, "of node", nodeID, "to network", networkID)
 	},
 }
 

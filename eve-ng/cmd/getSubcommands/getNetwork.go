@@ -84,15 +84,15 @@ The data returned contains:
 		}
 
 		//Parse network-id
-		networkId, err := strconv.Atoi(args[0])
+		networkID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
-				Msg("Couldn't convert networkId to int")
+				Msg("Couldn't convert networkID to int")
 			os.Exit(1)
 		}
 
 		//Perform GetNetwork operation
-		network, err := client.GetNetwork(lab, networkId)
+		network, err := client.GetNetwork(lab, networkID)
 		if err != nil {
 			log.Error().
 				Msg("Error during GetLabNetworks")

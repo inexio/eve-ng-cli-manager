@@ -67,7 +67,7 @@ var StopNodeCmd = &cobra.Command{
 		} else {
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read node-id value")
@@ -75,13 +75,13 @@ var StopNodeCmd = &cobra.Command{
 		}
 
 		//Perform StopNode operation
-		err = client.StopNode(lab, nodeId)
+		err = client.StopNode(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during StopNode")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully stopped node", strconv.Itoa(nodeId)+".")
+		fmt.Println("Successfully stopped node", strconv.Itoa(nodeID)+".")
 	},
 }

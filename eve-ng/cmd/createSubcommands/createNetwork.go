@@ -95,7 +95,7 @@ var CreateNetworkCmd = &cobra.Command{
 		}
 
 		//Perform AddNetwork operation
-		networkId, err := client.AddNetwork(lab, networkType, name, left, top, visibility, postfix)
+		networkID, err := client.AddNetwork(lab, networkType, name, left, top, visibility, postfix)
 		if err != nil {
 			log.Error().
 				Msg("Error during AddNetwork")
@@ -103,7 +103,7 @@ var CreateNetworkCmd = &cobra.Command{
 		}
 
 		fmt.Println("Successfully added network to lab.")
-		fmt.Println("Network ID:", networkId)
+		fmt.Println("Network ID:", networkID)
 	},
 }
 

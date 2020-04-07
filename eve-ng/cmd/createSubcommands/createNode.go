@@ -124,7 +124,7 @@ var CreateNodeCmd = &cobra.Command{
 		}
 
 		//Perform AddNode operation
-		nodeId, err := client.AddNode(lab, nodeType, template, config, delay, icon, image, name, left, top, ram, console, cpu, cpuLimit, ethernet, firstMac, rdpUser, rdpPass, uuid, count)
+		nodeID, err := client.AddNode(lab, nodeType, template, config, delay, icon, image, name, left, top, ram, console, cpu, cpuLimit, ethernet, firstMac, rdpUser, rdpPass, uuid, count)
 		if err != nil {
 			log.Error().
 				Msg("Error during AddNode")
@@ -132,7 +132,7 @@ var CreateNodeCmd = &cobra.Command{
 		}
 
 		fmt.Println("Successfully added node to lab.")
-		fmt.Println("Node ID:", nodeId)
+		fmt.Println("Node ID:", nodeID)
 	},
 }
 

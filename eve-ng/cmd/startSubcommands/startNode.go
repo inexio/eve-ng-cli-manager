@@ -67,7 +67,7 @@ var StartNodeCmd = &cobra.Command{
 		} else {
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
-		nodeId, err := strconv.Atoi(args[0])
+		nodeID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read node-id value")
@@ -75,13 +75,13 @@ var StartNodeCmd = &cobra.Command{
 		}
 
 		//Perform StartNode operation
-		err = client.StartNode(lab, nodeId)
+		err = client.StartNode(lab, nodeID)
 		if err != nil {
 			log.Error().
 				Msg("Error during StartNode")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully started node", strconv.Itoa(nodeId)+".")
+		fmt.Println("Successfully started node", strconv.Itoa(nodeID)+".")
 	},
 }

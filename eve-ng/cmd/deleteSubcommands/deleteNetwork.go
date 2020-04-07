@@ -69,21 +69,21 @@ var DeleteNetworkCmd = &cobra.Command{
 			lab = viper.GetString("labPath") + viper.GetString("labName") + ".unl"
 		}
 
-		networkId, err := strconv.Atoi(args[0])
+		networkID, err := strconv.Atoi(args[0])
 		if err != nil {
 			log.Error().
 				Msg("Couldn't convert network-id to int")
 			os.Exit(1)
 		}
 
-		err = client.RemoveNetwork(lab, networkId)
+		err = client.RemoveNetwork(lab, networkID)
 		if err != nil {
 			log.Error().
 				Msg("Error during RemoveNetwork")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully deleted network", strconv.Itoa(networkId)+".")
+		fmt.Println("Successfully deleted network", strconv.Itoa(networkID)+".")
 	},
 }
 
