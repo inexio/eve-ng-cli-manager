@@ -1,0 +1,21 @@
+# .goreleaser.yml
+before:
+  hooks:
+  - go mod download
+
+builds:
+  -
+    id: "eve-ng"
+    dir: ./eve-ng
+    main: ./main.go
+    binary: eve-ng
+
+archives:
+  -
+    builds:
+    - eve-ng
+    
+    replacements:
+      amd64: 64-bit
+      386: 32-bit
+      darwin: macOS
