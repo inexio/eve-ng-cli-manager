@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/davecgh/go-spew/spew"
 	evengclient "github.com/inexio/eve-ng-restapi-go-client"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
@@ -91,7 +90,6 @@ var NodeToNetworkCmd = &cobra.Command{
 		//Perform ConnectNodeInterfaceToNetwork operation
 		err = client.ConnectNodeInterfaceToNetwork(lab, nodeId, interfaceId, networkId)
 		if err != nil {
-			spew.Dump(err)
 			log.Error().
 				Msg("Error during ConnectNodeInterfaceToNetwork")
 			os.Exit(1)

@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/davecgh/go-spew/spew"
 	evengclient "github.com/inexio/eve-ng-restapi-go-client"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
@@ -85,7 +84,6 @@ var NodeFromNetworkCmd = &cobra.Command{
 		//Perform DisconnectNodeInterfaceFromNetwork operation
 		err = client.DisconnectNodeInterfaceFromNetwork(lab, nodeId, interfaceId)
 		if err != nil {
-			spew.Dump(err)
 			log.Error().
 				Msg("Error during DisconnectNodeInterfaceFromNetwork")
 			os.Exit(1)

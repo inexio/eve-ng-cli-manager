@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/davecgh/go-spew/spew"
 	evengclient "github.com/inexio/eve-ng-restapi-go-client"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
@@ -60,7 +59,6 @@ Example: move folder --folder "/Testfolder" --destination "/Testfolder2/Testfold
 		//Perform MoveLab operation
 		err = client.MoveFolder(folder, destination)
 		if err != nil {
-			spew.Dump(err)
 			log.Error().
 				Msg("Error during MoveFolder")
 			os.Exit(1)

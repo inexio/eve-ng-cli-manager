@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/davecgh/go-spew/spew"
 	evengclient "github.com/inexio/eve-ng-restapi-go-client"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
@@ -70,7 +69,6 @@ var StopNodesCmd = &cobra.Command{
 		//Perform StopNodes operation
 		err = client.StopNodes(lab)
 		if err != nil {
-			spew.Dump(err)
 			log.Error().
 				Msg("Error during StopNodes")
 			os.Exit(1)

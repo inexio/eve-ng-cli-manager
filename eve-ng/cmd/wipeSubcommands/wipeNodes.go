@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/davecgh/go-spew/spew"
 	evengclient "github.com/inexio/eve-ng-restapi-go-client"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
@@ -70,7 +69,6 @@ var WipeNodesCmd = &cobra.Command{
 		//Perform WipeNodes operation
 		err = client.WipeNodes(lab)
 		if err != nil {
-			spew.Dump(err)
 			log.Error().
 				Msg("Error during WipeNodes")
 			os.Exit(1)
