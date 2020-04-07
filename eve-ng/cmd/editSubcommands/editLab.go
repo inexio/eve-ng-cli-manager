@@ -80,7 +80,12 @@ var EditLabCmd = &cobra.Command{
 
 		if !cmd.Flag("lab").Changed && cmd.Flag("name").Changed {
 			viper.Set("labName", name)
-			viper.WriteConfig()
+			err := viper.WriteConfig()
+			err = viper.WriteConfig()
+			if err != nil {
+				log.Error().
+					Msg("Error while writing into config")
+			}
 		}
 
 		fmt.Println("Successfully edited lab.")
