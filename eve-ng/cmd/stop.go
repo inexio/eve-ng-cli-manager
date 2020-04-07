@@ -13,7 +13,7 @@ import (
 var stopCmd = &cobra.Command{
 	Use:   "stop",
 	Short: "Stops a component",
-	Long: `Stops the given component within the provided lab`,
+	Long:  `Stops the given component within the provided lab`,
 	Run: func(cmd *cobra.Command, args []string) {
 		err := cmd.Help()
 		if err != nil {
