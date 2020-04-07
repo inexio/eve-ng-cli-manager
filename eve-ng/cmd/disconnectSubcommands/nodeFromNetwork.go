@@ -74,7 +74,7 @@ var NodeFromNetworkCmd = &cobra.Command{
 				Msg("Couldn't read 'node' flag value")
 			os.Exit(1)
 		}
-		interfaceId, err := cmd.Flags().GetInt("interface")
+		interfaceID, err := cmd.Flags().GetInt("interface")
 		if err != nil {
 			log.Error().
 				Msg("Couldn't read 'interface' flag value")
@@ -82,14 +82,14 @@ var NodeFromNetworkCmd = &cobra.Command{
 		}
 
 		//Perform DisconnectNodeInterfaceFromNetwork operation
-		err = client.DisconnectNodeInterfaceFromNetwork(lab, nodeID, interfaceId)
+		err = client.DisconnectNodeInterfaceFromNetwork(lab, nodeID, interfaceID)
 		if err != nil {
 			log.Error().
 				Msg("Error during DisconnectNodeInterfaceFromNetwork")
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully disconnect interface", interfaceId, "of node", nodeID, "from its network.")
+		fmt.Println("Successfully disconnect interface", interfaceID, "of node", nodeID, "from its network.")
 	},
 }
 
