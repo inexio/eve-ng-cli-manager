@@ -1,6 +1,6 @@
-baseurl: <your baseURL> 
-lpassword: <your password>
+baseurl: <your baseURL>
 username: <your username>
+password: <your password>
 
 labname: <your standard labs name>
 labpath: <your standard labs path>
