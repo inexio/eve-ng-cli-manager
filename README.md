@@ -164,7 +164,7 @@ Successfully created lab.
 You can get information about a component via the get command:
 
 ```
-eve-ng get lab --lab "/TestLab"
+eve-ng get lab "/TestLab"
 ```
 
 Which should return:
