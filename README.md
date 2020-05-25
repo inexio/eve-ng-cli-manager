@@ -300,6 +300,8 @@ If there are any problems or something does not work as intended, open an [issue
 
 If you have problems with the usage of the application itself you can use the built in **--help** flag to get some useful information about every command.
 
+![eve_ng_help](https://user-images.githubusercontent.com/55132811/82790074-b8f56280-9e6b-11ea-82f6-02bf388d0cbb.gif)
+
 ## Contribution
 
 Contributions to the project are welcome.
