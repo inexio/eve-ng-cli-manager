@@ -257,6 +257,7 @@ Node
   Configlist:
 ```
 
+![eve_ng_tutorial_x2](https://user-images.githubusercontent.com/55132811/82790504-71230b00-9e6c-11ea-8492-a1c7f4ba5ccd.gif)
 
 
 ## Tests
